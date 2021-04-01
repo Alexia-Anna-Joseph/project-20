@@ -5,13 +5,12 @@ var options={
     
     restitution:0.3,
     friction:0.5,
-    density:1.2
+    density:0.38
 }
 
-   this.body=Bodies.circle(x,y,20,options);
-   
-   World.add(world,this.body);
+   this.body=Bodies.circle(x,y,35,options);
    this.image=loadImage("paper.png")
+    World.add(world,this.body);
    
 
         
@@ -22,7 +21,9 @@ var options={
         
         imageMode(CENTER);
         
-      image(this.image,100,100,this.radius,this.radius);
+
+        fill("white");
+        image(this.image,pos.x,pos.y, 95,95);
         
     }
 };
